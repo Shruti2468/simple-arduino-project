@@ -1,0 +1,32 @@
+//coded in arduino IDE(arduino UNO board)
+int led=12;
+int motor=13;
+
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(motor, OUTPUT);
+}
+
+void loop()
+{
+  long time=micros();
+  digitalWrite(motor,HIGH); 
+  //digitalWrite(led,HIGH);
+  if(time>3000000&&time<4000000){
+    digitalWrite(led,HIGH);  
+    delay(1000);
+    digitalWrite(led,LOW);
+    delay(1000);
+     digitalWrite(led,HIGH);  
+    delay(1000);
+    digitalWrite(led,LOW);
+    delay(1000);
+  }
+  if(time>3000000){
+    digitalWrite(motor,LOW);
+    delay(1000);
+  }
+     
+     }
+         
